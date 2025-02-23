@@ -1,5 +1,6 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
   margin: auto;
   box-sizing: border-box;
   background-color: rgb(38, 68, 95);
@@ -22,6 +23,7 @@ body {
 .header {
   grid-area: 'header';
   background-color: rgb(49, 49, 49);
+  background-image: url(/images/header-background.jpg);
   padding: 2rem;
   box-shadow: 1rem 1.5rem 2rem -2rem black;
   border-bottom: 1px solid black;
@@ -54,7 +56,7 @@ footer {
 /* Logo in the header */
 .logo {
   width: auto;
-  height: 12rem;
+  height: 7rem;
   grid-area: logo;
   margin: auto;
   margin-top: 1rem;
@@ -85,14 +87,16 @@ footer {
   min-width: 8rem;
   max-width: 30%;
   justify-self: center;
-  background-color: rgb(38, 68, 95);
+  background-color: rgb(51, 51, 51);
   color: white;
-  border: 2px solid black;
+  border: 2px solid rgb(24, 24, 24);
+  box-shadow: 1rem solid black;
 }
 
 /* Tablet view of webpage*/
 @media only screen and (min-width: 48rem) {
   .container {
+    grid-template-columns: auto;
     grid-template-rows: 0.3fr 2fr;
   }
 
@@ -104,6 +108,15 @@ footer {
     align-items: center;
     justify-content: center;
     line-height: 0.5rem;
+  }
+
+  .button {
+    margin-left: 1rem;
+    min-width: none;
+  }
+
+  .logo {
+    width: 16rem;
   }
 
   .page-content {
@@ -125,6 +138,7 @@ footer {
   }
   .logo {
     margin: 1rem;
+    width: 30rem;
   }
   .page-content {
     margin-left: 12rem;
