@@ -2,54 +2,73 @@ body {
   font-family: 'Courier New', Courier, monospace;
   margin: auto;
   box-sizing: border-box;
-  background-color: lightcoral;
+  background-color: rgb(38, 68, 95);
 }
 
 /* Below is my grid stuff*/
-
-.header {
-  /* CSS for header class*/
-  background-color: grey;
+/* Contains everything on my page*/
+.container {
   display: grid;
-  grid-template-columns: 0.2fr 0.2fr 1fr 0.2fr;
-  grid-template-rows: 18rem;
-  grid-template-areas: 'home blog logo contact';
-  align-items: center;
-  justify-content: center;
-  padding: 0rem;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr auto auto;
+  grid-template-areas:
+    'header'
+    'page-content';
+  gap: 1rem;
+  background-color: rgb(38, 68, 95);
 }
 
+/* CSS for header class*/
+.header {
+  grid-area: 'header';
+  background-color: rgb(49, 49, 49);
+  padding: 2rem;
+  box-shadow: 1rem 1.5rem 2rem -2rem black;
+  border-bottom: 1px solid black;
+  /*
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 18rem;
+  grid-template-areas: 'logo home blog contact';
+  align-items: center;
+  justify-content: center;
+  padding: 0rem;*/
+}
+
+/* CSS for main page stuff*/
 .page-content {
-  /* CSS for main page stuff*/
-  margin-left: 12rem;
-  margin-right: 12rem;
-  margin-top: 7rem;
-  background-color: bisque;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  background-color: rgb(233, 233, 233);
   display: grid;
   grid-template-rows: 1fr;
   padding: 2rem;
+  box-shadow: 0 0 1rem black;
 }
 
 footer {
-  margin-left: 12rem;
-  margin-right: 12rem;
-  margin-bottom: 3rem;
-  background-color: rgb(233, 145, 39);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  background-color: rgb(233, 233, 233);
   display: grid;
   grid-template-rows: 1fr;
   padding: 0.5rem;
+  box-shadow: 0 0 1rem black;
 }
 
 .logo {
-  width: 50%;
-  height: 100%;
+  width: auto;
+  height: 12rem;
   grid-area: logo;
-  justify-self: center;
-  padding-right: 20rem;
+  margin: auto;
+  margin-top: 1rem;
+  display: block;
 }
 
 /* Below is the css for grid area declaration */
-.home {
+.home .blog {
   grid-area: home;
 }
 
@@ -68,8 +87,16 @@ footer {
   display: block;
   border-radius: 0.5rem;
   padding: 1.4rem;
+  margin: 2rem auto;
   min-width: 8rem;
   max-width: 30%;
   justify-self: center;
-  background-color: aqua;
+  background-color: rgb(38, 68, 95);
+  color: white;
+  border: 2px solid black;
+}
+
+/* Changes webpage if on tablet */
+@media only screen and (min-width: 48rem) {
+  .h;
 }
