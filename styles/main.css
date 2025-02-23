@@ -1,0 +1,75 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: lightcoral;
+}
+
+/* Below is my grid stuff*/
+
+.header {
+  /* CSS for header class*/
+  background-color: grey;
+  display: grid;
+  grid-template-columns: 0.2fr 0.2fr 1fr 0.2fr;
+  grid-template-rows: 18rem;
+  grid-template-areas: 'home blog logo contact';
+  align-items: center;
+  justify-content: center;
+  padding: 0rem;
+}
+
+.page-content {
+  /* CSS for main page stuff*/
+  margin-left: 12rem;
+  margin-right: 12rem;
+  margin-top: 7rem;
+  background-color: bisque;
+  display: grid;
+  grid-template-rows: 1fr;
+  padding: 2rem;
+}
+
+footer {
+  margin-left: 12rem;
+  margin-right: 12rem;
+  margin-bottom: 3rem;
+  background-color: rgb(233, 145, 39);
+  display: grid;
+  grid-template-rows: 1fr;
+  padding: 0.5rem;
+}
+
+.logo {
+  width: 50%;
+  height: 100%;
+  grid-area: logo;
+  justify-self: center;
+  padding-right: 20rem;
+}
+
+/* Below is the css for grid area declaration */
+.home {
+  grid-area: home;
+}
+
+.blog {
+  grid-area: blog;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+/* Below is the css for my buttons */
+.button {
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+  border-radius: 0.5rem;
+  padding: 1.4rem;
+  min-width: 8rem;
+  max-width: 30%;
+  justify-self: center;
+  background-color: aqua;
+}
