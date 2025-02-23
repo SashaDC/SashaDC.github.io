@@ -5,8 +5,8 @@ body {
   background-color: rgb(38, 68, 95);
 }
 
-/* Below is my grid stuff*/
-/* Contains everything on my page*/
+/* Below is my grid stuff, I made it mobile responsive first*/
+/* Contains everything on my page */
 .container {
   display: grid;
   grid-template-columns: auto;
@@ -18,24 +18,16 @@ body {
   background-color: rgb(38, 68, 95);
 }
 
-/* CSS for header class*/
+/* CSS for header class */
 .header {
   grid-area: 'header';
   background-color: rgb(49, 49, 49);
   padding: 2rem;
   box-shadow: 1rem 1.5rem 2rem -2rem black;
   border-bottom: 1px solid black;
-  /*
-  display: grid;
-  grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
-  grid-template-rows: 18rem;
-  grid-template-areas: 'logo home blog contact';
-  align-items: center;
-  justify-content: center;
-  padding: 0rem;*/
 }
 
-/* CSS for main page stuff*/
+/* CSS for main page stuff */
 .page-content {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -47,6 +39,7 @@ body {
   box-shadow: 0 0 1rem black;
 }
 
+/* Footer CSS */
 footer {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -58,6 +51,7 @@ footer {
   box-shadow: 0 0 1rem black;
 }
 
+/* Logo in the header */
 .logo {
   width: auto;
   height: 12rem;
@@ -96,7 +90,50 @@ footer {
   border: 2px solid black;
 }
 
-/* Changes webpage if on tablet */
+/* Tablet view of webpage*/
 @media only screen and (min-width: 48rem) {
-  .h;
+  .container {
+    grid-template-rows: 0.3fr 2fr;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'logo home blog contact';
+    align-items: center;
+    justify-content: center;
+    line-height: 0.5rem;
+  }
+
+  .page-content {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 3rem;
+  }
+
+  footer {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+/* Desktop view of webpage*/
+@media only screen and (min-width: 64rem) {
+  .header {
+    grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr;
+  }
+  .logo {
+    margin: 1rem;
+  }
+  .page-content {
+    margin-left: 12rem;
+    margin-right: 12rem;
+    margin-top: 5rem;
+  }
+
+  footer {
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
 }
