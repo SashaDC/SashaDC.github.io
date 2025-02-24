@@ -41,6 +41,29 @@ body {
   box-shadow: 0 0 1rem black;
 }
 
+.article-format {
+  display: grid;
+  border-radius: 0.5rem;
+  border: 2px solid rgb(24, 24, 24);
+  grid-template-columns: auto;
+  grid-template-rows: 2fr;
+  grid-template-areas:
+    'a-header'
+    'a-text'
+    'a-button';
+}
+
+.article-header {
+  grid-area: a-header;
+}
+
+.article-header {
+  grid-area: a-header;
+}
+
+.article-button {
+  grid-area: a-button;
+}
 /* Footer CSS */
 footer {
   margin-left: 2rem;
@@ -83,6 +106,7 @@ footer {
   display: block;
   border-radius: 0.5rem;
   margin: 2rem auto;
+  text-decoration: none;
   min-width: 8rem;
   max-width: 30%;
   justify-self: center;
@@ -138,6 +162,11 @@ footer {
     margin-left: 5rem;
     margin-right: 5rem;
   }
+
+  .article-button {
+    grid-area: a-button;
+    margin: 1rem;
+  }
 }
 
 /* Desktop view of webpage*/
@@ -158,5 +187,10 @@ footer {
   footer {
     margin-left: 12rem;
     margin-right: 12rem;
+  }
+
+  .article-button {
+    grid-area: a-button;
+    margin: 1rem;
   }
 }
