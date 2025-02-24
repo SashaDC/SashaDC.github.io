@@ -90,6 +90,7 @@ footer {
 #funnypic {
   margin: auto;
 }
+
 /* Below is the css for grid area declaration */
 .home {
   grid-area: home;
