@@ -95,6 +95,13 @@ footer {
   padding: 1.2rem;
 }
 
+/* Shows that user is hovering over buttons*/
+.button:hover {
+  text-decoration: underline black;
+  background-color: rgb(102, 102, 102);
+  color: black;
+}
+
 /* Tablet view of webpage*/
 @media only screen and (min-width: 48rem) {
   .container {
