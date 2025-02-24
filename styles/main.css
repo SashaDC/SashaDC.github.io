@@ -1,5 +1,5 @@
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Comic Sans MS', monospace;
   text-align: center;
   margin: auto;
   box-sizing: border-box;
@@ -64,16 +64,16 @@ footer {
 }
 
 /* Below is the css for grid area declaration */
-.home .blog {
+.home {
   grid-area: home;
 }
 
-.blog {
-  grid-area: blog;
+.tech-blog {
+  grid-area: tech-blog;
 }
 
-.contact {
-  grid-area: contact;
+.hs-blog {
+  grid-area: hs-blog;
 }
 
 /* Below is the css for my buttons */
@@ -82,7 +82,6 @@ footer {
   text-align: center;
   display: block;
   border-radius: 0.5rem;
-  padding: 1.4rem;
   margin: 2rem auto;
   min-width: 8rem;
   max-width: 30%;
@@ -91,6 +90,9 @@ footer {
   color: white;
   border: 2px solid rgb(24, 24, 24);
   box-shadow: 1rem solid black;
+  text-decoration: none;
+  line-height: 1rem;
+  padding: 1.2rem;
 }
 
 /* Tablet view of webpage*/
@@ -104,7 +106,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
     grid-template-rows: 1fr;
-    grid-template-areas: 'logo home blog contact';
+    grid-template-areas: 'logo home tech-blog hs-blog';
     align-items: center;
     justify-content: center;
     line-height: 0.5rem;
