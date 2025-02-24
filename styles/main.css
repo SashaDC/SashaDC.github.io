@@ -57,8 +57,9 @@ body {
   grid-area: a-header;
 }
 
-.article-header {
-  grid-area: a-header;
+.article-text {
+  grid-area: a-text;
+  margin: 1rem;
 }
 
 .article-button {
