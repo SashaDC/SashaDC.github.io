@@ -251,7 +251,7 @@ h3 {
   }
 
   .article-format {
-    margin: auto 10rem;
+    margin: auto 10rem 3rem 10rem;
   }
 
   .article-button {
@@ -280,7 +280,7 @@ h3 {
   p,
   h2,
   h3 {
-    margin: 1.2rem auto;
+    margin: 1.2rem 5rem;
     text-wrap: 1rem;
   }
 }
