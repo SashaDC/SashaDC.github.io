@@ -1,5 +1,5 @@
 body {
-  font-family: 'Comic Sans MS', 'Comic Sans', monospace;
+  font-family: 'Comic Sans MS', 'Comic Sans', monospace; /* I like comic sans */
   text-align: center;
   margin: auto;
   box-sizing: border-box;
@@ -32,9 +32,7 @@ body {
 
 /* CSS for main page stuff */
 .page-content {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 1rem;
+  margin: 1rem 2rem 0 2rem;
   background-color: rgb(233, 233, 233);
   display: grid;
   grid-template-rows: 1fr;
@@ -42,6 +40,7 @@ body {
   box-shadow: 0 0 1rem black;
 }
 
+/* Stylizing for my articles*/
 .article-format {
   margin-top: 2rem;
   display: grid;
@@ -55,6 +54,17 @@ body {
     'a-button';
 }
 
+/* Footer CSS */
+footer {
+  margin: 0 2rem 1rem 2rem; /* It goes up right down left */
+  background-color: rgb(233, 233, 233);
+  display: grid;
+  grid-template-rows: 1fr;
+  padding: 0.5rem;
+  box-shadow: 0 0 1rem black;
+}
+
+/* Below is the css for grid area declaration */
 .article-header {
   grid-area: a-header;
 }
@@ -67,64 +77,7 @@ body {
 .article-button {
   grid-area: a-button;
 }
-/* Footer CSS */
-footer {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 1rem;
-  background-color: rgb(233, 233, 233);
-  display: grid;
-  grid-template-rows: 1fr;
-  padding: 0.5rem;
-  box-shadow: 0 0 1rem black;
-}
 
-/* Logo in the header */
-.logo {
-  width: auto;
-  height: 7rem;
-  grid-area: logo;
-  margin: auto;
-  margin-top: 1rem;
-  display: block;
-}
-
-#funnypic {
-  margin: auto;
-}
-
-#TH-image {
-  height: auto;
-  width: 14rem;
-  margin: auto;
-  margin-top: 7rem;
-}
-
-#CBM-image {
-  border-radius: 1rem;
-  height: auto;
-  width: 13rem;
-  margin: auto;
-  margin-top: 8rem;
-}
-
-.css-examples {
-  border: 2px solid black;
-  height: 16rem;
-  width: auto;
-  margin: auto;
-}
-
-.code-example {
-  border: 1px solid black;
-  border-radius: 7px;
-  color: rgb(233, 233, 233);
-  background-color: rgb(49, 49, 49);
-  padding: 0px 5px 0px 5px;
-  margin: 2px;
-}
-
-/* Below is the css for grid area declaration */
 .home {
   grid-area: home;
 }
@@ -135,6 +88,24 @@ footer {
 
 .hs-blog {
   grid-area: hs-blog;
+}
+
+/* Logo in the header */
+/* Will change eventually */
+.logo {
+  width: auto;
+  height: 6rem;
+  grid-area: logo;
+  margin: 1rem auto;
+  display: block;
+}
+
+/* Code for the image examples on CSS concept page */
+.css-examples {
+  border: 2px solid black;
+  height: 10rem;
+  width: auto;
+  margin: auto;
 }
 
 /* Below is the css for my buttons */
@@ -151,8 +122,6 @@ footer {
   background-color: rgb(51, 51, 51);
   color: white;
   border: 2px solid rgb(24, 24, 24);
-  box-shadow: 1rem solid black;
-  text-decoration: none;
   line-height: 1rem;
   padding: 1.2rem;
 }
@@ -164,17 +133,58 @@ footer {
   color: black;
 }
 
+/* Simple styling for examples on CSS Concepts page*/
+.code-example {
+  border: 1px solid black;
+  border-radius: 7px;
+  color: rgb(233, 233, 233);
+  background-color: rgb(49, 49, 49);
+  padding: 0px 5px 0px 5px;
+  margin: 2px;
+}
+
+/* The code below helps contain the headers/text/list in the center away from the sides*/
 li,
-p {
-  margin-bottom: 1.2rem;
+p,
+h2,
+h3 {
+  margin: 1.2rem;
   text-wrap: 1rem;
 }
 
+#ignore-the-space {
+  /* Lets me block stuff out */
+  margin: 0;
+}
+
+/* Id for image on main page */
+#funnypic {
+  margin: auto;
+}
+
+/* Id for Te Houtaewa image icon */
+#TH-image {
+  height: auto;
+  width: 14rem;
+  margin: auto;
+  margin-top: 9rem;
+}
+
+/* Id for CSS Box Modle image icon */
+#CBM-image {
+  border-radius: 1rem;
+  height: auto;
+  width: 13rem;
+  margin: auto;
+  margin-top: 9rem;
+}
+
+/*--------------------------------------------------*/
 /* Tablet view of webpage*/
 @media only screen and (min-width: 48rem) {
   .container {
     grid-template-columns: auto;
-    grid-template-rows: 0.3fr 2fr;
+    grid-template-rows: 0.3fr auto;
   }
 
   .header {
@@ -193,7 +203,7 @@ p {
   }
 
   .logo {
-    width: 16rem;
+    width: 14rem;
   }
 
   #TH-image {
@@ -207,14 +217,11 @@ p {
   }
 
   .page-content {
-    margin-left: 5rem;
-    margin-right: 5rem;
-    margin-top: 3rem;
+    margin: 3rem 5rem 0 5rem;
   }
 
   footer {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin: 1rem 5rem;
   }
 
   .article-button {
@@ -223,29 +230,28 @@ p {
   }
 }
 
+/*--------------------------------------------------*/
 /* Desktop view of webpage*/
+/* Need one for smaller laptop*/
 @media only screen and (min-width: 64rem) {
   .header {
     grid-template-columns: 2fr 0.5fr 0.5fr 0.5fr;
   }
   .logo {
+    width: auto;
+    height: 9rem;
     margin: 1rem;
-    width: 30rem;
   }
   .page-content {
-    margin-left: 12rem;
-    margin-right: 12rem;
-    margin-top: 5rem;
+    margin: 5rem 12rem 0 12rem;
   }
 
   footer {
-    margin-left: 12rem;
-    margin-right: 12rem;
+    margin: 1rem 12rem;
   }
 
   .article-format {
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin: auto 10rem;
   }
 
   .article-button {
@@ -254,13 +260,13 @@ p {
   }
 
   #TH-image {
-    width: 18rem;
+    width: 15rem;
     margin-top: 4rem;
     margin-bottom: 2rem;
   }
 
   #CBM-image {
-    width: 17rem;
+    width: 14rem;
     margin-top: 5rem;
     margin-bottom: 2rem;
   }
@@ -268,5 +274,13 @@ p {
   .center {
     text-align: center;
     list-style-position: inside;
+  }
+
+  li,
+  p,
+  h2,
+  h3 {
+    margin: 1.2rem auto;
+    text-wrap: 1rem;
   }
 }
