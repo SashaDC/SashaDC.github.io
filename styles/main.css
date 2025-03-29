@@ -143,6 +143,27 @@ footer {
   margin: 2px;
 }
 
+/* Table stuff */
+table,
+th,
+td {
+  margin: auto;
+  background-color: rgba(109, 109, 109, 0.438);
+  border: 2px solid black;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 5px;
+}
+
+#table_list {
+  margin: 1px;
+  padding-left: 1.2rem;
+}
+
+#table_list_text {
+  margin: 0;
+}
+
 /* The code below helps contain the headers/text/list in the center away from the sides*/
 li,
 p,
