@@ -144,6 +144,9 @@ footer {
 }
 
 /* Table stuff */
+table {
+  display: flexbox;
+}
 table,
 th,
 td {
