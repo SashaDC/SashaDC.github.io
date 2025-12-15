@@ -40,6 +40,13 @@ body {
   box-shadow: 0 0 1rem black;
 }
 
+.important {
+  border: 2px solid red;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: rgb(255, 228, 225);
+}
+
 /* Stylizing for my articles*/
 .article-format {
   margin-top: 2rem;
